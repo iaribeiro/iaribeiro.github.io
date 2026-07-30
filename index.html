@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EN16 — Estrada da Paz | Cicloturismo Aveiro–Vilar Formoso</title>
+<meta name="description" content="Guia de cicloturismo da EN16: 224 km entre o Porto de Aveiro e a fronteira de Vilar Formoso, em 5 etapas, através de Aveiro, Viseu e Guarda.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="road-noise" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#topo" class="brand">
+      <svg class="brand-marker" viewBox="0 0 40 64" aria-hidden="true">
+        <path d="M20 2 L36 20 L36 56 Q36 62 30 62 L10 62 Q4 62 4 56 L4 20 Z" />
+        <text x="20" y="32" text-anchor="middle" class="brand-marker-code">EN</text>
+        <text x="20" y="48" text-anchor="middle" class="brand-marker-num">16</text>
+      </svg>
+      <span class="brand-name">Estrada&nbsp;da&nbsp;Paz</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#rota">A Rota</a>
+      <a href="#etapas">Etapas</a>
+      <a href="#mapa">Mapa</a>
+      <a href="#locais">15 Locais</a>
+      <a href="#info">Ficha Técnica</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Itinerário nacional · EN16</p>
+      <h1>A estrada que liga<br><span class="hero-accent">o Atlântico</span> à <span class="hero-accent">fronteira</span></h1>
+      <p class="hero-lede">224&nbsp;km de asfalto quase esquecido pelo tráfego — de Aveiro à raia com Espanha, atravessando vales, serras, vinhas e aldeias que datam de antes da própria estrada.</p>
+      <div class="hero-cta">
+        <a href="#etapas" class="btn btn-primary">Ver as 5 etapas</a>
+        <a href="#mapa" class="btn btn-ghost">Explorar o mapa</a>
+      </div>
+    </div>
+    <div class="hero-stats" role="list">
+      <div class="stat" role="listitem"><span class="stat-num">224</span><span class="stat-unit">km</span><span class="stat-label">distância total</span></div>
+      <div class="stat" role="listitem"><span class="stat-num">5</span><span class="stat-unit">dias</span><span class="stat-label">duração recomendada</span></div>
+      <div class="stat" role="listitem"><span class="stat-num">3&nbsp;500</span><span class="stat-unit">m</span><span class="stat-label">desnível acumulado</span></div>
+      <div class="stat" role="listitem"><span class="stat-num">Média/Alta</span><span class="stat-label">dificuldade</span></div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="rota" class="section about">
+    <div class="section-inner about-grid">
+      <div class="about-text">
+        <p class="section-kicker">A rota</p>
+        <h2>Uma estrada, um país inteiro</h2>
+        <p>A EN16 é uma das mais históricas estradas portuguesas, ligando o Atlântico à maior fronteira terrestre nacional. Tem cerca de 220–225&nbsp;km, atravessa os distritos de Aveiro, Viseu e Guarda, cruza vales, serras, vinhas, aldeias históricas e cidades monumentais.</p>
+        <p>Hoje, com o tráfego desviado para as autoestradas paralelas, transformou-se numa das melhores rotas de cicloturismo do país — silenciosa o suficiente para se ouvir o rio Vouga, o Mondego e por fim o Côa.</p>
+        <p class="about-quote">“A candidata natural a tornar-se a EN2 do Centro de Portugal.”</p>
+      </div>
+      <dl class="about-facts">
+        <div><dt>Bicicleta recomendada</dt><dd>Gravel, Touring ou BTT</dd></div>
+        <div><dt>Melhor época</dt><dd>Abril–Junho e Setembro–Outubro</dd></div>
+        <div><dt>Municípios atravessados</dt><dd>14</dd></div>
+        <div><dt>Capitais de distrito</dt><dd>Aveiro · Viseu · Guarda</dd></div>
+        <div><dt>Rios cruzados</dt><dd>Caima, Vouga, Zela, Dão, Mondego, Côa</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ETAPAS -->
+  <section id="etapas" class="section stages">
+    <div class="section-inner">
+      <p class="section-kicker">Dia a dia</p>
+      <h2>As 5 etapas</h2>
+    </div>
+
+    <div class="stages-rail-wrap">
+      <aside class="stages-rail" aria-hidden="true">
+        <svg viewBox="0 0 40 1000" preserveAspectRatio="none" class="rail-svg">
+          <line x1="20" y1="0" x2="20" y2="1000" class="rail-line"/>
+        </svg>
+        <div class="rail-ticks">
+          <span style="top:0%">0</span>
+          <span style="top:23%">52</span>
+          <span style="top:45%">100</span>
+          <span style="top:59%">132</span>
+          <span style="top:83%">186</span>
+          <span style="top:100%">224</span>
+        </div>
+      </aside>
+
+      <div class="stages-list" id="stages-list"><!-- injetado via JS --></div>
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <section id="mapa" class="section map-section">
+    <div class="section-inner">
+      <p class="section-kicker">Percurso</p>
+      <h2>Mapa interativo</h2>
+      <p class="section-sub">Todos os pontos de interesse, restaurantes e dormidas mencionados no roteiro, agrupados por etapa.</p>
+    </div>
+    <div id="map" role="application" aria-label="Mapa interativo da rota EN16"></div>
+    <div class="map-legend" id="map-legend"></div>
+  </section>
+
+  <!-- 15 LOCAIS -->
+  <section id="locais" class="section highlights">
+    <div class="section-inner">
+      <p class="section-kicker">Não perder</p>
+      <h2>Os 15 locais imperdíveis da EN16</h2>
+    </div>
+    <ol class="highlights-grid" id="highlights-grid"><!-- injetado via JS --></ol>
+  </section>
+
+  <!-- FICHA TÉCNICA -->
+  <section id="info" class="section tech-summary">
+    <div class="section-inner">
+      <p class="section-kicker">Resumo técnico</p>
+      <h2>Ficha da rota</h2>
+      <div class="tech-grid">
+        <div class="tech-card"><span class="tech-num">224 km</span><span class="tech-label">Distância total</span></div>
+        <div class="tech-card"><span class="tech-num">5</span><span class="tech-label">Etapas</span></div>
+        <div class="tech-card"><span class="tech-num">14</span><span class="tech-label">Municípios atravessados</span></div>
+        <div class="tech-card"><span class="tech-num">2</span><span class="tech-label">Aldeias Históricas — Castelo Bom e Castelo Mendo</span></div>
+        <div class="tech-card"><span class="tech-num">3</span><span class="tech-label">Capitais de distrito — Aveiro, Viseu, Guarda</span></div>
+        <div class="tech-card"><span class="tech-num">6</span><span class="tech-label">Rios principais — Caima, Vouga, Zela, Dão, Mondego, Côa</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <p>Estrada da Paz — guia de cicloturismo não oficial da EN16.</p>
+    <p class="footer-sources">Fontes: pt.wikipedia.org · escapelivre.com · turismodocentro.pt · andardecoiso.pt · rotasnacionais.pt</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

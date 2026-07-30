@@ -1,0 +1,385 @@
+// Dados da rota EN16 — mesma informação que data/pois.json, embutida para evitar problemas de fetch em file://
+const EN16_DATA = {
+  "rota": {
+    "nome": "EN16 — Estrada da Paz",
+    "subtitulo": "Do Porto de Aveiro (Km 0) à Fronteira de Vilar Formoso (Km 224)",
+    "distanciaTotal": 224,
+    "duracaoRecomendada": "5 dias",
+    "dificuldade": "Média/Alta",
+    "bicicleta": "Gravel, Touring ou BTT",
+    "melhorEpoca": "Abril–Junho e Setembro–Outubro",
+    "desnivel": 3500,
+    "municipios": 14,
+    "aldeiasHistoricas": [
+      "Castelo Bom",
+      "Castelo Mendo"
+    ],
+    "capitaisDistrito": [
+      "Aveiro",
+      "Viseu",
+      "Guarda"
+    ],
+    "riosPrincipais": [
+      "Caima",
+      "Vouga",
+      "Zela",
+      "Dão",
+      "Mondego",
+      "Côa"
+    ]
+  },
+  "etapas": [
+    {
+      "numero": 1,
+      "nome": "Aveiro → Sever do Vouga",
+      "distancia": 52,
+      "kmInicio": 0,
+      "kmFim": 52,
+      "descricao": "O ponto de partida junto à ria, entre moliceiros e salinas, antes da estrada começar a subir para o interior verde de Aveiro.",
+      "pontosInteresse": [
+        {
+          "nome": "Km 0 – Porto de Aveiro",
+          "lat": 40.644,
+          "lng": -8.728,
+          "destaque": true
+        },
+        {
+          "nome": "Cais dos Moliceiros",
+          "lat": 40.6405,
+          "lng": -8.6538
+        },
+        {
+          "nome": "Museu de Aveiro",
+          "lat": 40.6417,
+          "lng": -8.6531
+        },
+        {
+          "nome": "Salinas de Aveiro",
+          "lat": 40.6475,
+          "lng": -8.651,
+          "destaque": true
+        },
+        {
+          "nome": "Pateira de Frossos",
+          "lat": 40.7104,
+          "lng": -8.5734
+        },
+        {
+          "nome": "Albergaria-a-Velha (Centro Histórico)",
+          "lat": 40.6936,
+          "lng": -8.4797
+        },
+        {
+          "nome": "Ponte sobre o Rio Caima",
+          "lat": 40.728,
+          "lng": -8.397
+        },
+        {
+          "nome": "Cascata da Cabreia",
+          "lat": 40.7564,
+          "lng": -8.3365,
+          "destaque": true
+        }
+      ],
+      "restaurante": {
+        "nome": "O Cortiço",
+        "local": "Sever do Vouga",
+        "lat": 40.7398,
+        "lng": -8.3696,
+        "especialidades": [
+          "Cabrito assado",
+          "Vitela assada"
+        ]
+      },
+      "dormida": {
+        "nome": "Hotel Rural Vale do Rio",
+        "lat": 40.7601,
+        "lng": -8.3069
+      }
+    },
+    {
+      "numero": 2,
+      "nome": "Sever do Vouga → São Pedro do Sul",
+      "distancia": 48,
+      "kmInicio": 52,
+      "kmFim": 100,
+      "descricao": "A EN16 entra na região de Lafões, uma das mais verdes do Centro de Portugal, ladeada por barragens e vinhas.",
+      "pontosInteresse": [
+        {
+          "nome": "Ribeiradio",
+          "lat": 40.7672,
+          "lng": -8.2002
+        },
+        {
+          "nome": "Barragem de Ribeiradio",
+          "lat": 40.7709,
+          "lng": -8.1958,
+          "destaque": true
+        },
+        {
+          "nome": "Oliveira de Frades",
+          "lat": 40.7334,
+          "lng": -8.1738
+        },
+        {
+          "nome": "Miradouro Nossa Senhora dos Dolores",
+          "lat": 40.733,
+          "lng": -8.1623
+        },
+        {
+          "nome": "Vouzela",
+          "lat": 40.723,
+          "lng": -8.1126,
+          "destaque": true
+        },
+        {
+          "nome": "Ponte Medieval de Vouzela",
+          "lat": 40.724,
+          "lng": -8.111
+        },
+        {
+          "nome": "São Pedro do Sul",
+          "lat": 40.7554,
+          "lng": -8.0722
+        }
+      ],
+      "restaurante": {
+        "nome": "Manjar no Centro",
+        "local": "São Pedro do Sul",
+        "lat": 40.7552,
+        "lng": -8.0732,
+        "especialidades": [
+          "Vitela de Lafões DOP",
+          "Arroz de míscaros"
+        ]
+      },
+      "dormida": {
+        "nome": "Hotel do Parque",
+        "nota": "Próximo das Termas de São Pedro do Sul",
+        "lat": 40.744,
+        "lng": -8.0972
+      }
+    },
+    {
+      "numero": 3,
+      "nome": "São Pedro do Sul → Viseu",
+      "distancia": 32,
+      "kmInicio": 100,
+      "kmFim": 132,
+      "descricao": "A etapa mais curta, das maiores termas da Península Ibérica até ao coração monumental de Viseu.",
+      "pontosInteresse": [
+        {
+          "nome": "Termas de São Pedro do Sul",
+          "lat": 40.742,
+          "lng": -8.0926,
+          "destaque": true,
+          "nota": "As maiores termas da Península Ibérica"
+        },
+        {
+          "nome": "Portal do Vouga",
+          "lat": 40.7874,
+          "lng": -8.0203
+        },
+        {
+          "nome": "Viseu – Rossio",
+          "lat": 40.661,
+          "lng": -7.9123
+        },
+        {
+          "nome": "Sé de Viseu",
+          "lat": 40.6589,
+          "lng": -7.9131,
+          "destaque": true
+        },
+        {
+          "nome": "Museu Grão Vasco",
+          "lat": 40.6591,
+          "lng": -7.9126
+        },
+        {
+          "nome": "Porta do Soar",
+          "lat": 40.6581,
+          "lng": -7.912
+        }
+      ],
+      "restaurante": {
+        "nome": "Mesa de Lemos",
+        "local": "ou Muralha da Sé",
+        "lat": 40.5479,
+        "lng": -7.8795,
+        "especialidades": []
+      },
+      "dormida": {
+        "nome": "Pousada de Viseu",
+        "lat": 40.6619,
+        "lng": -7.9139
+      }
+    },
+    {
+      "numero": 4,
+      "nome": "Viseu → Celorico da Beira",
+      "distancia": 54,
+      "kmInicio": 132,
+      "kmFim": 186,
+      "descricao": "Uma das etapas mais interessantes, atravessando a região vinícola do Dão e aproximando-se da Serra da Estrela.",
+      "pontosInteresse": [
+        {
+          "nome": "Mangualde",
+          "lat": 40.605,
+          "lng": -7.763,
+          "destaque": true
+        },
+        {
+          "nome": "Palácio dos Condes de Anadia",
+          "lat": 40.6042,
+          "lng": -7.7624
+        },
+        {
+          "nome": "Fornos de Algodres",
+          "lat": 40.6162,
+          "lng": -7.5408
+        },
+        {
+          "nome": "Miradouro da Fraga da Pena",
+          "lat": 40.6183,
+          "lng": -7.5345
+        },
+        {
+          "nome": "Rio Mondego",
+          "lat": 40.6322,
+          "lng": -7.462,
+          "destaque": true
+        },
+        {
+          "nome": "Linha panorâmica do Mondego",
+          "lat": 40.63,
+          "lng": -7.45
+        },
+        {
+          "nome": "Celorico da Beira",
+          "lat": 40.6378,
+          "lng": -7.3912,
+          "destaque": true
+        },
+        {
+          "nome": "Castelo de Celorico",
+          "lat": 40.6379,
+          "lng": -7.3903
+        }
+      ],
+      "restaurante": {
+        "nome": "Lagar da Serra",
+        "lat": 40.639,
+        "lng": -7.3908,
+        "especialidades": [
+          "Borrego",
+          "Queijo Serra da Estrela"
+        ]
+      },
+      "dormida": {
+        "nome": "Hotel Mira Serra",
+        "lat": 40.638,
+        "lng": -7.3921
+      }
+    },
+    {
+      "numero": 5,
+      "nome": "Celorico da Beira → Vilar Formoso",
+      "distancia": 38,
+      "kmInicio": 186,
+      "kmFim": 224,
+      "descricao": "A etapa rainha da rota, passando por aldeias históricas classificadas até à fronteira que dá nome ao museu da Paz.",
+      "pontosInteresse": [
+        {
+          "nome": "Vale do Mondego",
+          "lat": 40.65,
+          "lng": -7.33
+        },
+        {
+          "nome": "Guarda",
+          "lat": 40.5373,
+          "lng": -7.2678,
+          "destaque": true
+        },
+        {
+          "nome": "Sé Catedral da Guarda",
+          "lat": 40.5377,
+          "lng": -7.2675
+        },
+        {
+          "nome": "Castelo Bom",
+          "lat": 40.6128,
+          "lng": -6.8719,
+          "destaque": true,
+          "nota": "Aldeia histórica"
+        },
+        {
+          "nome": "Ponte de São Roque",
+          "lat": 40.6107,
+          "lng": -6.8672
+        },
+        {
+          "nome": "Castelo Mendo",
+          "lat": 40.9002,
+          "lng": -6.9134,
+          "destaque": true,
+          "nota": "Uma das mais belas aldeias históricas portuguesas"
+        },
+        {
+          "nome": "Vilar Formoso",
+          "lat": 40.6053,
+          "lng": -6.8347
+        },
+        {
+          "nome": "Estação Ferroviária de Vilar Formoso",
+          "lat": 40.6065,
+          "lng": -6.8344
+        },
+        {
+          "nome": "Museu Vilar Formoso Fronteira da Paz",
+          "lat": 40.6059,
+          "lng": -6.8339,
+          "destaque": true
+        },
+        {
+          "nome": "Marco Final EN16",
+          "lat": 40.6048,
+          "lng": -6.8352,
+          "destaque": true
+        }
+      ],
+      "restaurante": {
+        "nome": "Bodega do Leão",
+        "lat": 40.605,
+        "lng": -6.835,
+        "especialidades": [
+          "Posta mirandesa",
+          "Cabrito assado"
+        ]
+      },
+      "dormida": {
+        "nome": "Hotel Lusitânia",
+        "nota": "ou Hotel Fortaleza de Almeida",
+        "lat": 40.596,
+        "lng": -6.84
+      }
+    }
+  ],
+  "locaisImperdiveis": [
+    "Porto de Aveiro",
+    "Salinas de Aveiro",
+    "Cascata da Cabreia",
+    "Barragem de Ribeiradio",
+    "Vouzela Medieval",
+    "Termas de São Pedro do Sul",
+    "Centro Histórico de Viseu",
+    "Vinhas do Dão",
+    "Mangualde",
+    "Vale do Mondego",
+    "Celorico da Beira",
+    "Guarda",
+    "Castelo Bom",
+    "Castelo Mendo",
+    "Fronteira de Vilar Formoso"
+  ]
+};
