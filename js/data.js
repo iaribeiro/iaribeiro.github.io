@@ -1,5 +1,7 @@
 // Dados da rota EN16 — mesma informação que data/pois.json, embutida para evitar problemas de fetch em file://
-const EN16_DATA = {
+// Atribuído a window: um `const` de topo não cria propriedade no objeto global,
+// e main.js lê window.EN16_DATA.
+window.EN16_DATA = {
   "rota": {
     "nome": "EN16 — Estrada da Paz",
     "subtitulo": "Do Porto de Aveiro (Km 0) à Fronteira de Vilar Formoso (Km 224)",
@@ -32,9 +34,9 @@ const EN16_DATA = {
     {
       "numero": 1,
       "nome": "Aveiro → Sever do Vouga",
-      "distancia": 52,
+      "distancia": 44,
       "kmInicio": 0,
-      "kmFim": 52,
+      "kmFim": 44,
       "descricao": "O ponto de partida junto à ria, entre moliceiros e salinas, antes da estrada começar a subir para o interior verde de Aveiro.",
       "pontosInteresse": [
         {
@@ -100,9 +102,9 @@ const EN16_DATA = {
     {
       "numero": 2,
       "nome": "Sever do Vouga → São Pedro do Sul",
-      "distancia": 48,
-      "kmInicio": 52,
-      "kmFim": 100,
+      "distancia": 37,
+      "kmInicio": 44,
+      "kmFim": 81,
       "descricao": "A EN16 entra na região de Lafões, uma das mais verdes do Centro de Portugal, ladeada por barragens e vinhas.",
       "pontosInteresse": [
         {
@@ -163,9 +165,9 @@ const EN16_DATA = {
     {
       "numero": 3,
       "nome": "São Pedro do Sul → Viseu",
-      "distancia": 32,
-      "kmInicio": 100,
-      "kmFim": 132,
+      "distancia": 27,
+      "kmInicio": 81,
+      "kmFim": 108,
       "descricao": "A etapa mais curta, das maiores termas da Península Ibérica até ao coração monumental de Viseu.",
       "pontosInteresse": [
         {
@@ -218,9 +220,9 @@ const EN16_DATA = {
     {
       "numero": 4,
       "nome": "Viseu → Celorico da Beira",
-      "distancia": 54,
-      "kmInicio": 132,
-      "kmFim": 186,
+      "distancia": 47,
+      "kmInicio": 108,
+      "kmFim": 155,
       "descricao": "Uma das etapas mais interessantes, atravessando a região vinícola do Dão e aproximando-se da Serra da Estrela.",
       "pontosInteresse": [
         {
@@ -285,8 +287,8 @@ const EN16_DATA = {
     {
       "numero": 5,
       "nome": "Celorico da Beira → Vilar Formoso",
-      "distancia": 38,
-      "kmInicio": 186,
+      "distancia": 69,
+      "kmInicio": 155,
       "kmFim": 224,
       "descricao": "A etapa rainha da rota, passando por aldeias históricas classificadas até à fronteira que dá nome ao museu da Paz.",
       "pontosInteresse": [
@@ -307,6 +309,13 @@ const EN16_DATA = {
           "lng": -7.2675
         },
         {
+          "nome": "Castelo Mendo",
+          "lat": 40.5945,
+          "lng": -6.9486,
+          "destaque": true,
+          "nota": "Uma das mais belas aldeias históricas portuguesas"
+        },
+        {
           "nome": "Castelo Bom",
           "lat": 40.6128,
           "lng": -6.8719,
@@ -317,13 +326,6 @@ const EN16_DATA = {
           "nome": "Ponte de São Roque",
           "lat": 40.6107,
           "lng": -6.8672
-        },
-        {
-          "nome": "Castelo Mendo",
-          "lat": 40.9002,
-          "lng": -6.9134,
-          "destaque": true,
-          "nota": "Uma das mais belas aldeias históricas portuguesas"
         },
         {
           "nome": "Vilar Formoso",

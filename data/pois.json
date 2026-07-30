@@ -17,9 +17,9 @@
     {
       "numero": 1,
       "nome": "Aveiro → Sever do Vouga",
-      "distancia": 52,
+      "distancia": 44,
       "kmInicio": 0,
-      "kmFim": 52,
+      "kmFim": 44,
       "descricao": "O ponto de partida junto à ria, entre moliceiros e salinas, antes da estrada começar a subir para o interior verde de Aveiro.",
       "pontosInteresse": [
         { "nome": "Km 0 – Porto de Aveiro", "lat": 40.6440, "lng": -8.7280, "destaque": true },
@@ -37,9 +37,9 @@
     {
       "numero": 2,
       "nome": "Sever do Vouga → São Pedro do Sul",
-      "distancia": 48,
-      "kmInicio": 52,
-      "kmFim": 100,
+      "distancia": 37,
+      "kmInicio": 44,
+      "kmFim": 81,
       "descricao": "A EN16 entra na região de Lafões, uma das mais verdes do Centro de Portugal, ladeada por barragens e vinhas.",
       "pontosInteresse": [
         { "nome": "Ribeiradio", "lat": 40.7672, "lng": -8.2002 },
@@ -56,9 +56,9 @@
     {
       "numero": 3,
       "nome": "São Pedro do Sul → Viseu",
-      "distancia": 32,
-      "kmInicio": 100,
-      "kmFim": 132,
+      "distancia": 27,
+      "kmInicio": 81,
+      "kmFim": 108,
       "descricao": "A etapa mais curta, das maiores termas da Península Ibérica até ao coração monumental de Viseu.",
       "pontosInteresse": [
         { "nome": "Termas de São Pedro do Sul", "lat": 40.7420, "lng": -8.0926, "destaque": true, "nota": "As maiores termas da Península Ibérica" },
@@ -74,9 +74,9 @@
     {
       "numero": 4,
       "nome": "Viseu → Celorico da Beira",
-      "distancia": 54,
-      "kmInicio": 132,
-      "kmFim": 186,
+      "distancia": 47,
+      "kmInicio": 108,
+      "kmFim": 155,
       "descricao": "Uma das etapas mais interessantes, atravessando a região vinícola do Dão e aproximando-se da Serra da Estrela.",
       "pontosInteresse": [
         { "nome": "Mangualde", "lat": 40.6050, "lng": -7.7630, "destaque": true },
@@ -94,17 +94,17 @@
     {
       "numero": 5,
       "nome": "Celorico da Beira → Vilar Formoso",
-      "distancia": 38,
-      "kmInicio": 186,
+      "distancia": 69,
+      "kmInicio": 155,
       "kmFim": 224,
       "descricao": "A etapa rainha da rota, passando por aldeias históricas classificadas até à fronteira que dá nome ao museu da Paz.",
       "pontosInteresse": [
         { "nome": "Vale do Mondego", "lat": 40.6500, "lng": -7.3300 },
         { "nome": "Guarda", "lat": 40.5373, "lng": -7.2678, "destaque": true },
         { "nome": "Sé Catedral da Guarda", "lat": 40.5377, "lng": -7.2675 },
+        { "nome": "Castelo Mendo", "lat": 40.5945, "lng": -6.9486, "destaque": true, "nota": "Uma das mais belas aldeias históricas portuguesas" },
         { "nome": "Castelo Bom", "lat": 40.6128, "lng": -6.8719, "destaque": true, "nota": "Aldeia histórica" },
         { "nome": "Ponte de São Roque", "lat": 40.6107, "lng": -6.8672 },
-        { "nome": "Castelo Mendo", "lat": 40.9002, "lng": -6.9134, "destaque": true, "nota": "Uma das mais belas aldeias históricas portuguesas" },
         { "nome": "Vilar Formoso", "lat": 40.6053, "lng": -6.8347 },
         { "nome": "Estação Ferroviária de Vilar Formoso", "lat": 40.6065, "lng": -6.8344 },
         { "nome": "Museu Vilar Formoso Fronteira da Paz", "lat": 40.6059, "lng": -6.8339, "destaque": true },
