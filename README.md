@@ -16,6 +16,11 @@ estrada-da-paz/
 │   └── main.js         # gera as etapas, o mapa e a lista de locais
 ├── data/
 │   └── pois.json        # a mesma informação em JSON puro (fonte de dados)
+├── favicon.svg         # ícone principal (marco quilométrico "16")
+├── favicon.ico         # fallback 16/32/48 px para browsers sem SVG
+├── apple-touch-icon.png # 180 px, ecrã principal do iOS (não aceita SVG)
+├── tools/
+│   └── make-icons.mjs  # regenera o .ico e o .png a partir do desenho do SVG
 └── README.md
 ```
 
@@ -77,6 +82,18 @@ Todos os dados da rota (etapas, distâncias, coordenadas, restaurantes, dormidas
 - **Cores**: asfalto (#1C1B19), pedra do marco quilométrico (#F1EAD9), verde de sinalização de estrada nacional (#2B4F3E), vinho do Dão (#7A2E2E), granito da Beira (#8C8577), ouro/trigo (#B8862B).
 - **Tipografia**: Oswald (títulos, condensada, como sinalética rodoviária), Source Serif 4 (texto corrido) e IBM Plex Mono (coordenadas e distâncias, como um odómetro/GPS).
 - **Elemento de assinatura**: o marco quilométrico de granito ilustrado no logótipo e a "calha" vertical de progressão (0–224 km) ao lado das etapas.
+
+### Favicon
+
+O ícone reaproveita o marco quilométrico do logótipo: pedra sobre asfalto, faixa verde de estrada nacional e o "16" em vinho do Dão. O `favicon.svg` é o ícone principal (suportado por Chrome, Firefox, Edge e Safari 14+); o `.ico` e o `apple-touch-icon.png` são fallbacks.
+
+Para regenerar os ficheiros raster depois de editar o `favicon.svg`:
+
+```bash
+node tools/make-icons.mjs
+```
+
+O script é Node puro (só usa `zlib`) — não instala nada. Rasteriza os mesmos traços vetoriais do SVG, e abaixo de 24 px omite o "16" de propósito, porque a essa escala os dígitos ficam ilegíveis e só sujam a silhueta. Se mudares o desenho do SVG, tens de espelhar a alteração na geometria no topo do script; os dois não são gerados um do outro.
 
 ## 📄 Licença
 

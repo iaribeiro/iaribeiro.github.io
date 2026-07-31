@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="EN16 — Estrada da Paz">
+  <title>EN16 — Estrada da Paz</title>
+  <!-- Marco quilométrico de granito com a faixa verde de estrada nacional. -->
+  <defs>
+    <clipPath id="marco">
+      <path d="M32 2 L48 20 L48 56 Q48 62 42 62 L22 62 Q16 62 16 56 L16 20 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- asfalto -->
+  <rect width="64" height="64" rx="10" fill="#1C1B19"/>
+
+  <!-- pedra do marco -->
+  <path d="M32 2 L48 20 L48 56 Q48 62 42 62 L22 62 Q16 62 16 56 L16 20 Z" fill="#F1EAD9"/>
+
+  <!-- faixa verde de sinalização -->
+  <rect x="16" y="17" width="32" height="12" fill="#1F3A2D" clip-path="url(#marco)"/>
+
+  <!-- "16" em vinho do Dão, desenhado como contorno para não depender de fontes -->
+  <g fill="none" stroke="#7A2E2E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 38 L26 34 L26 56"/>
+    <path d="M43 36 C39 35 33 40 33 47.5 C33 52.5 35.5 56 38.5 56 C41.5 56 44 53.5 44 50 C44 46.5 41.5 44.5 38.5 44.5 C36 44.5 34 46 33 47.5"/>
+  </g>
+</svg>
